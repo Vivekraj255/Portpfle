@@ -1,0 +1,176 @@
+{% include "header.html" %}
+     
+        <section class="home" id="home">
+            <div class="home-width">
+                <div class="home-content">
+                    <div class="text-1">Hiii, There!</div>
+                    <div class="text-2">My name is Vivek Raj</div>
+                    <div class="text-3">And I'm a <span class="second">coder</span></div>
+                    <p>I hereby declare that the information provided by me is authentic and correct to the best of my knowledge.</p>
+                </div>
+            </div>
+        </section>
+        
+        <a href="/static/Vivek raj.pdf" download class="cv">Download CV</a>
+        
+        <!-- About section -->
+        <section class="about" id="about">
+            <div class="max-width">
+                <h2>About Me</h2>
+                <div class="about-content">
+                    <div class="column left">
+                        <img src="/static/Self_IMG.jpg" alt="Self" width="#" height="#">
+                    </div>
+                    
+                    <div class="column right">
+                        <div class="text txt-1">Skills</div>
+                        <div class="info">
+                            <span>HTML</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="line html"></div>
+
+                        <div class="info">
+                            <span>CSS</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="line css"></div>
+
+                        <div class="info">
+                            <span>Java Script</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="line js"></div>
+
+                        <div class="info">
+                            <span>JAVA</span>
+                            <span>75%</span>
+                        </div>
+                        <div class="line java"></div>
+
+                        <div class="info">
+                            <span>Python</span>
+                            <span>92%</span>
+                        </div>
+                        <div class="line python"></div>
+
+                        <div class="info">
+                            <span>Django</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="line django"></div>
+
+                        <div class="info">
+                            <span>MySql</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="line mysql"></div>
+
+                        <div class="info">
+                            <span>MySql-Lite</span>
+                            <span>75%</span>
+                        </div>
+                        <div class="line mysql-lite"></div>
+                        
+                    </div>
+
+                    <div class="column right">
+                        <div class="text txt-2">Education</div>
+                        <div class="doc"><span>B.tech</span><span>2019 – 2023</span></div>
+                            <div class="doc-1">
+                                IES Collage of technology,
+                                <div>Electronics & Communication Engineering,</div>
+                                RGPV University, Bhopal- 462044.
+                            </div>
+
+                        <div class="doc"><span>12th</span><span>2017 - 2019</span></div>
+                            <div class="doc-1">
+                                Dwarika Nath Collage (Masaurhi),
+                                <div>Intermediate in PCM,</div>
+                                Bihar Board, Patna- 804452.
+                            </div>
+
+                        <div class="doc"><span>10th</span><span>2016</span></div>
+                        <div class="doc-1">
+                            DAV Public School (New Punaichak),
+                            <div>CBSE, Patna- 800023.</div>
+                        </div>    
+                    </div>     
+                </div>                
+                
+                <div class="column down">
+                    <div class="text-3" id="certificate">Certificates & Course</div>
+                    <div class="crtfct">
+
+                        <div class="HTML&CSS">
+                            <div class="doc-2">HTML&CSS</div>
+                            <a href="/static/CSTML.png"><img src="/static/CSTML.png" alt="HTML&CSS"></a>
+                        </div>
+
+                        <div class="JavaScript">
+                            <div class="doc-2">JavaScript</div>
+                            <a href="/static/JavaScript.png"><img src="/static/JavaScript.png" alt="HTML&CSS"></a>
+                        </div>
+
+                        <div class="Python">
+                            <div class="doc-2">Python</div>
+                            <a href="/static/Python GST.jpg"><img src="/static/Python GST.jpg" alt="Python"></a>
+                            <a href="/static/IBM Python.png"><img src="/static/IBM Python.png" alt="Python"></a>
+                        </div>
+                    
+                        <div class="Robotic">
+                            <div class="doc-2">Robotic</div>
+                            <a href="/static/Robotic.png"><img src="/static/Robotic.png" alt="Robotic"></a>
+                        </div>
+                            
+                        <div class="AI&ML">
+                            <div class="doc-2">AI & ML Certificate of participation</div>
+                            <a href="/static/PS-AI-MAR2023.jpg"><img src="/static/PS-AI-MAR2023.jpg" alt="AI&ML Certificate"></a>
+                            <a href="/static/AI&ML Certificate.jpg"><img src="/static/AI&ML Certificate.jpg" alt="AI&ML Certificate"></a>
+                        </div>
+                    </div>    
+                </div>
+                    
+                
+            </div>
+        </section>
+
+        <section>
+            <div class="form" id="contact">
+                <div class="contact">
+                    <h1>Contact me</h1>
+
+                    <form method="post" action="{% url 'saveEnquiry' %}">
+                        {% csrf_token %}
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="text" name="Email" placeholder="Your Email" required>
+                        <textarea name="Massage" rows="6" placeholder="Your Massage"></textarea>
+                        <button type="Submit">Submit</button>
+                    </form>
+                    
+                    
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Theme toggle section -->
+        <section>
+            <div class="toggle-btn">
+                <i class="fa fa-cog"></i>
+            </div>
+            <div class="theme-toggler">
+                <!-- <h3>Choose color</h3> -->
+                <div class="buttons">
+                    <div class="theme-btn" style="background: olive"></div>
+                    <div class="theme-btn" style="background: cornflowerblue"></div>
+                    <div class="theme-btn" style="background: palevioletred"></div>
+                    <div class="theme-btn" style="background: gray"></div>
+                    <div class="theme-btn" style="background: violet"></div>
+                    <div class="theme-btn" style="background: rgb(48, 28, 28)"></div>
+                </div>
+            </div>
+        </section>
+
+{% include "footer.html" %}
+    
